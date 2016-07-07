@@ -16,6 +16,10 @@ for count = 0: 1: 8
          numberSmallLabels(k) = count
        end
        numberLarge = find(LabelVector==num);
+       numberLargeLabels = zeros(length(numberLarge));
+       for k = 1:length(numberLarge)
+         numberLargeLabels(k) = count
+       end
        numberSmall = numberSmall - 8;
        numberLarge = numberLarge - 8;
        % get small and large number ^

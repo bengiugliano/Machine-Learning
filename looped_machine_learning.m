@@ -11,11 +11,13 @@ SVMModel = zeros(9,1);
 for count = 0: 1: 8
    for num = count+1: 9
        numberSmall = find(LabelVector==count);
-       numberSmallLabels = LabelVector(numberSmall)
+       numberSmallLabels = zeros(length(numberSmall));
+       for k = 1:length(numberSmall)
+         numberSmallLabels(k) = count
+       end
        numberLarge = find(LabelVector==num);
        numberSmall = numberSmall - 8;
        numberLarge = numberLarge - 8;
-       
        % get small and large number ^
        smallArray = zeros(784, length(numberSmall));
        for i=1: length(numberSmall)

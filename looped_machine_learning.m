@@ -13,12 +13,12 @@ for count = 0: 1: 8
        numberSmall = find(LabelVector==count);
        numberSmallLabels = zeros(length(numberSmall));
        for k = 1:length(numberSmall)
-         numberSmallLabels(k) = count
+         numberSmallLabels(k) = count;
        end
        numberLarge = find(LabelVector==num);
        numberLargeLabels = zeros(length(numberLarge));
        for k = 1:length(numberLarge)
-         numberLargeLabels(k) = count
+         numberLargeLabels(k) = num;
        end
        numberSmall = numberSmall - 8;
        numberLarge = numberLarge - 8;

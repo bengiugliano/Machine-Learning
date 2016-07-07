@@ -11,14 +11,14 @@ SVMModel = zeros(9,1);
 for count = 0: 1: 8
    for num = count+1: 9
        numberSmall = find(LabelVector==count);
-       numberSmallLabels = zeros(length(numberSmall));
+       numberSmallLabels = zeros(length(numberSmall),1);
        for k = 1:length(numberSmall)
-         numberSmallLabels(k) = count;
+         numberSmallLabels(k,1) = count;
        end
        numberLarge = find(LabelVector==num);
-       numberLargeLabels = zeros(length(numberLarge));
+       numberLargeLabels = zeros(length(numberLarge),1);
        for k = 1:length(numberLarge)
-         numberLargeLabels(k) = num;
+         numberLargeLabels(k,1) = num;
        end
        numberSmall = numberSmall - 8;
        numberLarge = numberLarge - 8;
